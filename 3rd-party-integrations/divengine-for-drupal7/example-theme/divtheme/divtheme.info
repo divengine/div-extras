@@ -1,0 +1,9 @@
+name = Div Theme
+description = Example of theme using the Div PHP Template Engine for Drupal 7.
+core = 7.x
+engine = div
+version = "7.x-1.0"
+core = "7.x"
+project = "divtheme"
+
+stylesheets[all][] = style.css
