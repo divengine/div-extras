@@ -1,0 +1,12 @@
+{
+    name: "Nintendo",
+    games: [
+        {
+            name: "Mario Bros",
+            version: 3
+        },{
+            name: "Mortal Kombat",
+            version: 2
+        }        
+    ]    
+}

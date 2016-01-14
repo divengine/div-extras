@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Div Template Wizard</title>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/bootstrap.js"></script>
+        <link href="lib/bootstrap.css" rel="stylesheet"/>
+        <link href="div-template-wizard.css" rel="stylesheet"/>
+        <script src="div-template-wizard.js"></script>
+        <script src="lib/codepress/codepress.js" type="text/javascript"></script> 
+    </head>
+    <body>
+     <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <i class="fa fa-reorder"></i>
+            </button>
+            <a href="#" class="navbar-brand">[[]] Div Template Wizard</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                        <li><a href="">Menu item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <div class="wrapper wrapper-content">
+        <div class="container">
+            <div class="row">
+                 <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Replacements</h3></div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                            <label>Variable name:</label>
+                            <input id ="varname" class="form-control" />
+                            </div>
+                            <div class="panel panel-default">
+                                 <div class="panel-heading">Modifiers</div>
+                                 <div class="panel-body">
+                                     <ul class="list-group" id = "modifiers">
+                                        <!-- li added by js-->
+                                     </ul>
+                                 </div>
+                                 <div class="panel-footer">
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('ucase');">Ucase</button>
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('lcase');">Lcase</button>
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('ucfirst');">First letter</button>
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('eachword');">Each word</button>
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('length');">String length</button>    
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('cwords');">Count of words</button>
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('csenten');">Count of sentences</button>
+                                    <button class="btn btn-default btn-sm" onclick="divwizard.replacements.addModifier('cparag');">Count of paragraphs</button>
+                                 </div>
+                            </div>
+                            
+                            
+                            <br/>
+                        </div>
+                        <div class="panel-footer">    
+                            <button onclick = "divwizard.replacements.simple($('#varname').val());" class="btn btn-default">Insert code</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-8">
+                    <div class="panel panel-default col-md-14">
+                        <div class="panel-heading">Template code </div>
+                        <div class="panel-body">
+                        <textarea rows ="25" style ="width:98%;" id="myCpWindow" class="codepress html linenumbers-on">
+                           // your code here
+                        </textarea> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
